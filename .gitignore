@@ -36,3 +36,4 @@ wheels/
 
 # Reva specific ignored directories
 uploads/
+.venv/
