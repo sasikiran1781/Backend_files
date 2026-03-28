@@ -1,0 +1,10 @@
+[tool.pyright]
+venvPath = "/Applications/XAMPP/xamppfiles/htdocs/reva_backend"
+venv = ".venv"
+extraPaths = [
+    "/Applications/XAMPP/xamppfiles/htdocs/reva_backend",
+    "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/services",
+    "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/routes"
+]
+pythonVersion = "3.10"
+pythonPlatform = "Darwin"

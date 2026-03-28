@@ -1,0 +1,25 @@
+{
+    "python.defaultInterpreterPath": "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/.venv/bin/python3",
+    "python.interpreterPath": "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/.venv/bin/python3",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.indexing": true,
+    "python.analysis.userSymbols": true,
+    "python.analysis.venvPath": "/Applications/XAMPP/xamppfiles/htdocs/reva_backend",
+    "python.analysis.extraPaths": [
+        "/Applications/XAMPP/xamppfiles/htdocs/reva_backend",
+        "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/services",
+        "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/routes",
+        "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/database",
+        "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/utils"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportPrivateImportUsage": "none"
+    },
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.linting.enabled": false,
+    "pylyzer.pythonPath": "/Applications/XAMPP/xamppfiles/htdocs/reva_backend/.venv/bin/python3",
+    "pylyzer.diagnostics": false
+}
+ 
