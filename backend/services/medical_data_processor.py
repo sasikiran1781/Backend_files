@@ -116,8 +116,8 @@ class MedicalDataProcessor:
 
     def __init__(self):
         self.config_key = os.getenv("SETUP")
-        self.primary_node = "gemini-2.0-flash" 
-        self.fallback_node = "gemini-2.5-flash"
+        self.primary_node = "gemini-1.5-flash-8b" 
+        self.fallback_node = "gemini-1.5-flash"
         
         if self.config_key:
             _engine.configure(api_key=self.config_key)
