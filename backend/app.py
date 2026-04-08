@@ -66,6 +66,8 @@ def create_app():
                 columns = [c['name'] for c in inspector.get_columns('users')]
                 if 'otp' not in columns:
                     db.session.execute(text("ALTER TABLE users ADD COLUMN otp VARCHAR(10);"))
+                if 'password' not in columns:
+                    db.session.execute(text("ALTER TABLE users ADD COLUMN password VARCHAR(255);"))
                 if 'otp_expiry' not in columns:
                     db.session.execute(text("ALTER TABLE users ADD COLUMN otp_expiry DATETIME;"))
                     
