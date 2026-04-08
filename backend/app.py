@@ -82,18 +82,20 @@ def create_app():
                     
                 # Health Score Updates
                 inspector_hr = inspect(db.engine)
-                hr_cols = [c['name'] for c in inspector_hr.get_columns('health_reports')]
-                if 'activity_score' not in hr_cols:
-                    db.session.execute(text("ALTER TABLE health_reports ADD COLUMN activity_score INTEGER;"))
-                if 'wellness_score' not in hr_cols:
-                    db.session.execute(text("ALTER TABLE health_reports ADD COLUMN wellness_score INTEGER;"))
+                if 'health_reports' in inspector_hr.get_table_names():
+                    hr_cols = [c['name'] for c in inspector_hr.get_columns('health_reports')]
+                    if 'activity_score' not in hr_cols:
+                        db.session.execute(text("ALTER TABLE health_reports ADD COLUMN activity_score INTEGER;"))
+                    if 'wellness_score' not in hr_cols:
+                        db.session.execute(text("ALTER TABLE health_reports ADD COLUMN wellness_score INTEGER;"))
                 
                 inspector_fc = inspect(db.engine)
-                fc_cols = [c['name'] for c in inspector_fc.get_columns('followup_comparisons')]
-                if 'activity_improvement' not in fc_cols:
-                    db.session.execute(text("ALTER TABLE followup_comparisons ADD COLUMN activity_improvement FLOAT;"))
-                if 'wellness_improvement' not in fc_cols:
-                    db.session.execute(text("ALTER TABLE followup_comparisons ADD COLUMN wellness_improvement FLOAT;"))
+                if 'followup_comparisons' in inspector_fc.get_table_names():
+                    fc_cols = [c['name'] for c in inspector_fc.get_columns('followup_comparisons')]
+                    if 'activity_improvement' not in fc_cols:
+                        db.session.execute(text("ALTER TABLE followup_comparisons ADD COLUMN activity_improvement FLOAT;"))
+                    if 'wellness_improvement' not in fc_cols:
+                        db.session.execute(text("ALTER TABLE followup_comparisons ADD COLUMN wellness_improvement FLOAT;"))
                     
                 db.session.commit()
                 print("✅ [DATABASE] Columns verified.")
