@@ -37,3 +37,5 @@ wheels/
 # Reva specific ignored directories
 uploads/
 .venv/
+instance/
+.vercel/
